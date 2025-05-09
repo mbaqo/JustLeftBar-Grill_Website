@@ -48,6 +48,10 @@ header nav {
     left: 20px;
 }
 
+.nav-logo.hidden {
+    display: none;
+}
+
 .nav-buttons {
     display: flex;
     gap: 40px;
@@ -79,6 +83,8 @@ header nav {
 #nav-img {
     width: 160px;
 }
+
+/* INDEX.HTML
 
 /* HERO */
 section.hero {
@@ -307,6 +313,11 @@ footer .socials i {
 }
 
 @media (max-width: 1070px) {
+    section.hero {
+        padding: 0px;
+        margin: 100px 20px 0px;
+    }
+
     .flex-section {
         flex-direction: column;
     }
