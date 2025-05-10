@@ -28,11 +28,14 @@ body {
 }
 
 .container {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+h2 {
+    font-family: "Lobster", cursive;
 }
 
 /* HEADER AND NAV */
@@ -95,14 +98,80 @@ header nav {
 
 main {
     flex: 1;
+    margin: 160px 40px 60px;
 }
 
-.main-container {
-    background: #fff;
-    border-radius: 10px;
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-white);
+    border-radius: 20px;
     box-shadow: 0px 16px 5px rgba(0, 0, 0, 0.7);
     width: 100%;
     max-width: 1200px;
+    padding: 30px 50px;
+}
+
+.menu-container h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.menu-header h1 {
+    font-size: 2rem;
+    color: var(--color-red);
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.grid h2,
+h3 {
+    grid-column: 1 / 3;
+}
+
+.grid h2 {
+    color: var(--color-blue);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-yellow);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+
+.appetizers .flex-container.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.burgers h3 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.price {
+    color: green;
+}
+
+.item .price {
+    margin-left: 10px;
+}
+
+.item .item-description {
+    margin: 0px;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 /* FOOTER */
@@ -181,9 +250,19 @@ footer .socials i {
 }
 
 @media (max-width: 768px) {
+
     /* Footer */
     .name {
         display: none;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item h4 {
+        text-align: center;
     }
 
     footer {
